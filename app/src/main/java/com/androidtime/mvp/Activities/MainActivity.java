@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        new MainActivityPresenter(this).getIpInformation();
+        MainActivityPresenter mPresenter = new MainActivityPresenter(this); // just created a presenter object
+        mPresenter.getIpInformation();
 
     }
 
